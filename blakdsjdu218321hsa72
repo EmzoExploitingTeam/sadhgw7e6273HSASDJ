@@ -1,0 +1,1434 @@
+repeat task.wait() until game.Players.LocalPlayer
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua", true))()
+
+game:GetService("StarterGui"):SetCore("SendNotification",{
+Title = "Executed!",
+Text = "Welcome to Dr.Rox Hub! Credit to Dr.Rox#7485!"
+})
+
+local Window = Library.CreateLib("Dr.Rox All Hubs", "Ocean")
+local Tab = Window:NewTab("Hubs")
+local Section = Tab:NewSection("Information")
+
+Section:NewButton("Roblox Talent Show Game", "ButtonInfo", function()
+    repeat task.wait() until game.Players.LocalPlayer
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua", true))()
+
+game:GetService("StarterGui"):SetCore("SendNotification",{
+Title = "Executed!",
+Text = "Welcome to Dr.Rox Hub! Credit to Dr.Rox#7485!"
+})
+
+local Window = Library.CreateLib("RGT-Roblox Talent Show", "Ocean")
+local Tab = Window:NewTab("Script")
+local Section = Tab:NewSection("Functions")
+
+Section:NewButton("Detect Admins", "ButtonInfo", function()
+   local User = game.Players.LocalPlayer; local groupID = 2794002; local roleNames = {"Official Audition Winners","🤖 Ranking Bot", "🤝Relations Member", "🤝Head Relations", "💻 Discord Moderator", "💻 Head Discord Moderator", "✨ Administrator", "🌟 Head Administrator", "🌟 Executive Director", "💼 Community Manager", "🌟 Developer", "🌟 Owner"}
+while true do
+ task.wait()
+ for _, player in ipairs(game.Players:GetPlayers()) do
+  if player:IsInGroup(groupID) then
+   for _, roleName in ipairs(roleNames) do
+    if player:GetRoleInGroup(groupID) == roleName then
+     User:Kick(player.Name .. " is the noob with role " .. roleName)
+    else
+     local carpetFloor = game:GetService("Workspace").CarpetFloor; local parts = carpetFloor:GetDescendants() for _, part in ipairs(parts) do if part:IsA("BasePart") then part.Color = Color3.new(math.random(), math.random(), math.random()) end end
+    end
+   end
+  end
+ end
+end
+end)
+
+Section:NewButton("AntiStage 1", "ButtonInfo", function()
+    local hrp = game.Players.LocalPlayer.Character
+hrp.Parent = nil
+hrp.HumanoidRootPart.Parent = nil
+hrp.Parent = game.workspace
+end)
+
+Section:NewButton("AntiStage2 Use god and bang (host username)", "ButtonInfo", function()
+   loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
+end)
+
+Section:NewButton("AutoFarm REP", "ButtonInfo", function()
+   local gui = Instance.new("ScreenGui")
+gui.Name = "MyGui"
+gui.ResetOnSpawn = false
+gui.Parent = game.Players.LocalPlayer.PlayerGui
+
+local frame = Instance.new("Frame")
+frame.Size = UDim2.new(0, 400, 0, 200)
+frame.Position = UDim2.new(0.5, -200, 0.5, -100)
+frame.BackgroundColor3 = Color3.fromRGB(40, 40, 40) -- Change background color to dark gray
+frame.BorderSizePixel = 0 -- Remove border
+frame.Active = true
+frame.Draggable = true
+frame.Parent = gui
+
+local autofarmButton = Instance.new("TextButton")
+autofarmButton.Text = "Autofarm Rep"
+autofarmButton.Size = UDim2.new(0, 200, 0, 40)
+autofarmButton.Position = UDim2.new(0.5, -100, 0.05, 0)
+autofarmButton.BackgroundColor3 = Color3.fromRGB(255, 89, 0) -- Change button color to orange
+autofarmButton.BorderSizePixel = 0
+autofarmButton.Font = Enum.Font.SourceSansBold -- Change font to bold
+autofarmButton.TextColor3 = Color3.new(1, 1, 1) -- Change text color to white
+autofarmButton.Parent = frame
+
+local serverHopButton = Instance.new("TextButton")
+serverHopButton.Text = "Server Hop Autofarm"
+serverHopButton.Size = UDim2.new(0, 200, 0, 40)
+serverHopButton.Position = UDim2.new(0.5, -100, 0.355, 0)
+serverHopButton.BackgroundColor3 = Color3.fromRGB(255, 89, 0)
+serverHopButton.BorderSizePixel = 0
+serverHopButton.Font = Enum.Font.SourceSansBold
+serverHopButton.TextColor3 = Color3.new(1, 1, 1)
+serverHopButton.Parent = frame
+
+local statusLabel = Instance.new("TextLabel")
+statusLabel.Text = "Autofarm Script is not activated"
+statusLabel.Size = UDim2.new(1, 0, 0, 30)
+statusLabel.Position = UDim2.new(0, 0, 0.610, 0)
+statusLabel.BackgroundTransparency = 1 -- Make background transparent
+statusLabel.Font = Enum.Font.SourceSansBold
+statusLabel.TextColor3 = Color3.new(1, 1, 1)
+statusLabel.TextSize = 20 -- Increase text size
+statusLabel.Parent = frame
+
+local closeButton = Instance.new("TextButton")
+closeButton.Text = "Close"
+closeButton.Size = UDim2.new(0, 100, 0, 40)
+closeButton.Position = UDim2.new(0.5, -50, 0.79, 0)
+closeButton.BackgroundColor3 = Color3.fromRGB(255, 89, 0)
+closeButton.BorderSizePixel = 0
+closeButton.Font = Enum.Font.SourceSansBold
+closeButton.TextColor3 = Color3.new(1, 1, 1)
+closeButton.Parent = frame
+
+closeButton.MouseButton1Click:Connect(function()
+    frame.Visible = false
+end)
+
+autofarmButton.MouseButton1Click:Connect(function()
+    if syn and syn.request then request = syn.request end
+local queueteleport = syn and syn.queue_on_teleport or queue_on_teleport or fluxus and fluxus.queue_on_teleport
+local TeleportService = game:GetService("TeleportService")
+local http = game:GetService("HttpService")
+local rs = game:FindService("RunService")
+local Players = game:FindService("Players")
+repeat task.wait() until Players.LocalPlayer --localplayer wouldnt be created :(
+local lp = Players.LocalPlayer
+local PlaceId = game.PlaceId
+local cursor = ''
+local servers = {}
+
+local ObstacleCourses = workspace:WaitForChild("ObstacleCourses")
+local Teleports = ObstacleCourses:WaitForChild("Teleports")
+
+local function GetRoot()
+    repeat task.wait() until lp.Character and lp.Character:FindFirstChildWhichIsA("Humanoid") and lp.Character:FindFirstChildWhichIsA("Humanoid").RootPart
+    return lp.Character:FindFirstChildWhichIsA("Humanoid").RootPart
+end
+
+local function jsond(str)
+    return http:JSONDecode(str)
+end
+
+local function collectrep(BasePart)
+    local Teleport = tostring(BasePart:WaitForChild("Teleport").Value)
+    local TeleportBasePart = Teleports:WaitForChild(Teleport)
+    local debounce = 0
+
+    repeat
+        GetRoot().CFrame = BasePart.CFrame --* CFrame.new(5,0,0)
+        rs.Heartbeat:Wait()
+        debounce += 1
+    until debounce > 60 and lp:DistanceFromCharacter(TeleportBasePart.Position) >= 1
+end
+
+for i,v in next, ObstacleCourses:GetChildren() do
+    if v:IsA("Model") and v.Name:find("ObstacleCourse") then
+        repeat task.wait() until v:FindFirstChildWhichIsA("BasePart")
+        collectrep(v:FindFirstChildWhichIsA("BasePart"))
+    end
+end
+end)
+
+serverHopButton.MouseButton1Click:Connect(function()
+    if syn and syn.request then request = syn.request end
+local queueteleport = syn and syn.queue_on_teleport or queue_on_teleport or fluxus and fluxus.queue_on_teleport
+local TeleportService = game:GetService("TeleportService")
+local http = game:GetService("HttpService")
+local rs = game:FindService("RunService")
+local Players = game:FindService("Players")
+repeat task.wait() until Players.LocalPlayer --localplayer wouldnt be created :(
+local lp = Players.LocalPlayer
+local PlaceId = game.PlaceId
+local cursor = ''
+local servers = {}
+
+local ObstacleCourses = workspace:WaitForChild("ObstacleCourses")
+local Teleports = ObstacleCourses:WaitForChild("Teleports")
+
+local function GetRoot()
+    repeat task.wait() until lp.Character and lp.Character:FindFirstChildWhichIsA("Humanoid") and lp.Character:FindFirstChildWhichIsA("Humanoid").RootPart
+    return lp.Character:FindFirstChildWhichIsA("Humanoid").RootPart
+end
+
+local function jsond(str)
+    return http:JSONDecode(str)
+end
+
+local function collectrep(BasePart)
+    local Teleport = tostring(BasePart:WaitForChild("Teleport").Value)
+    local TeleportBasePart = Teleports:WaitForChild(Teleport)
+    local debounce = 0
+
+    repeat
+        GetRoot().CFrame = BasePart.CFrame --* CFrame.new(5,0,0)
+        rs.Heartbeat:Wait()
+        debounce += 1
+    until debounce > 60 and lp:DistanceFromCharacter(TeleportBasePart.Position) >= 1
+end
+
+for i,v in next, ObstacleCourses:GetChildren() do
+    if v:IsA("Model") and v.Name:find("ObstacleCourse") then
+        repeat task.wait() until v:FindFirstChildWhichIsA("BasePart")
+        collectrep(v:FindFirstChildWhichIsA("BasePart"))
+    end
+end
+
+if not request or not queueteleport then return end
+
+while cursor and #servers == 0 do
+    local req = request({Url = ('https://games.roblox.com/v1/games/%s/servers/Public?sortOrder=Asc&limit=100&cursor=%s'):format(PlaceId,cursor)})
+    local body = jsond(req.Body)
+    
+    if body and body.data then
+        coroutine.wrap(function()
+            for i,v in next, body.data do
+                if type(v) == 'table' and tonumber(v.playing) and tonumber(v.maxPlayers) and v.playing < v.maxPlayers then
+                    table.insert(servers, 1, v.id)
+                end 
+            end
+        end)()
+    
+        if body.nextPageCursor then
+            cursor = body.nextPageCursor
+        end
+    end
+    task.wait()
+end
+
+queueteleport([[loadstring(game:HttpGet('https://raw.githubusercontent.com/78n/Amity/main/RobloxTalentShow.lua'))()]])
+
+while #servers > 0 do
+    TeleportService:TeleportToPlaceInstance(PlaceId, servers[math.random(1, #servers)], lp)
+    task.wait(1)
+end
+end) 
+end)
+
+Section:NewButton("Midi autoplay(piano)", "ButtonInfo", function()
+   loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/richie0866/MidiPlayer/main/package.lua"))()
+end)
+
+Section:NewButton("Get secret badge", "ButtonInfo", function()
+   local player = game.Players.LocalPlayer
+local character = player.Character
+
+local function teleport(location)
+    character:SetPrimaryPartCFrame(location)
+end
+
+local function waitAndReturn(duration, originalLocation)
+    wait(duration)
+    teleport(originalLocation)
+end
+
+local newLocation = CFrame.new(28.696630477905273, 169.78363037109375, -421.5202331542969)
+local originalLocation = character:GetPrimaryPartCFrame()
+
+teleport(newLocation)
+waitAndReturn(5, originalLocation)
+end)
+end)
+
+Section:NewButton("Super blox soccer", "ButtonInfo", function()
+    repeat task.wait() until game.Players.LocalPlayer
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua", true))()
+
+game:GetService("StarterGui"):SetCore("SendNotification",{
+Title = "Executed!",
+Text = "Welcome to Dr.Rox Hub! Credit to Dr.Rox#7485!"
+})
+
+local Window = Library.CreateLib("SuperBloxSoccer", "Ocean")
+local Tab = Window:NewTab("Main")
+local Section = Tab:NewSection("Functions")
+
+Section:NewButton("AC Bypass!:)", "ButtonInfo", function()
+    -- Get the ReplicatedStorage service
+local replicatedStorage = game:GetService("ReplicatedStorage")
+
+-- Delete AntiCheatTrigger
+local antiCheatTrigger = replicatedStorage:FindFirstChild("AntiCheatTrigger")
+if antiCheatTrigger then
+    antiCheatTrigger:Destroy()
+    print("AntiCheatTrigger deleted.")
+else
+    print("AntiCheatTrigger not found.")
+end
+
+-- Delete ReachSent
+local reachSent = replicatedStorage:FindFirstChild("ReachSent")
+if reachSent then
+    reachSent:Destroy()
+    print("ReachSent deleted.")
+else
+    print("ReachSent not found.")
+end
+
+-- Delete AdminRemotes
+local adminRemotes = replicatedStorage:FindFirstChild("AdminRemotes")
+if adminRemotes then
+    adminRemotes:Destroy()
+    print("AdminRemotes deleted.")
+else
+    print("AdminRemotes not found.")
+end
+
+end)
+
+local BallSize = 0
+
+Section:NewSlider("Choose Ball Size", "", 100, 0, function(s)
+local ball = game.Workspace.Ball
+ball.Size = Vector3.new(s,s,s)
+print(s)
+end)
+
+
+
+
+
+
+Section:NewSlider("FastBall", "SliderInfo", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
+game.Workspace.Ball.Velocity = s * game.Workspace.Ball.Velocity.unit
+end)
+
+Section:NewButton("Fling All", "ButtonInfo", function() loadstring(game:HttpGet('https://pastebin.com/raw/r97d7dS0', true))() end)
+
+Section:NewButton("ControlBall( OP  )", "ButtonInfo", function()
+    local function a(b, c)
+    local d = getfenv(c)
+    local e =
+        setmetatable(
+        {},
+        {__index = function(self, f)
+                if f == "script" then
+                    return b
+                else
+                    return d[f]
+                end
+            end}
+    )
+    setfenv(c, e)
+    return c
+end
+local g = {}
+local h = Instance.new("Model", game:GetService("Lighting"))
+local i = Instance.new("Tool")
+local j = Instance.new("Part")
+local k = Instance.new("Script")
+local l = Instance.new("LocalScript")
+local m = sethiddenproperty or set_hidden_property
+i.Name = "Telekinesis"
+i.Parent = h
+i.Grip = CFrame.new(0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+i.GripForward = Vector3.new(-0, -1, -0)
+i.GripRight = Vector3.new(0, 0, 1)
+i.GripUp = Vector3.new(1, 0, 0)
+j.Name = "Handle"
+j.Parent = i
+j.CFrame = CFrame.new(-17.2635937, 15.4915619, 46, 0, 1, 0, 1, 0, 0, 0, 0, -1)
+j.Orientation = Vector3.new(0, 180, 90)
+j.Position = Vector3.new(-17.2635937, 15.4915619, 46)
+j.Rotation = Vector3.new(-180, 0, -90)
+j.Color = Color3.new(0.0666667, 0.0666667, 0.0666667)
+j.Transparency = 1
+j.Size = Vector3.new(1, 1.20000005, 1)
+j.BottomSurface = Enum.SurfaceType.Weld
+j.BrickColor = BrickColor.new("Really black")
+j.Material = Enum.Material.Metal
+j.TopSurface = Enum.SurfaceType.Smooth
+j.brickColor = BrickColor.new("Really black")
+k.Name = "LineConnect"
+k.Parent = i
+table.insert(
+    g,
+    a(
+        k,
+        function()
+            wait()
+            local n = script.Part2
+            local o = script.Part1.Value
+            local p = script.Part2.Value
+            local q = script.Par.Value
+            local color = script.Color
+            local r = Instance.new("Part")
+            r.TopSurface = 0
+            r.BottomSurface = 0
+            r.Reflectance = .5
+            r.Name = "Laser"
+            r.Locked = true
+            r.CanCollide = false
+            r.Anchored = true
+            r.formFactor = 0
+            r.Size = Vector3.new(1, 1, 1)
+            local s = Instance.new("BlockMesh")
+            s.Parent = r
+            while true do
+                if n.Value == nil then
+                    break
+                end
+                if o == nil or p == nil or q == nil then
+                    break
+                end
+                if o.Parent == nil or p.Parent == nil then
+                    break
+                end
+                if q.Parent == nil then
+                    break
+                end
+                local t = CFrame.new(o.Position, p.Position)
+                local dist = (o.Position - p.Position).magnitude
+                r.Parent = q
+                r.BrickColor = color.Value.BrickColor
+                r.Reflectance = color.Value.Reflectance
+                r.Transparency = color.Value.Transparency
+                r.CFrame = CFrame.new(o.Position + t.lookVector * dist / 2)
+                r.CFrame = CFrame.new(r.Position, p.Position)
+                s.Scale = Vector3.new(.25, .25, dist)
+                wait()
+            end
+            r:remove()
+            script:remove()
+        end
+    )
+)
+k.Disabled = true
+l.Name = "MainScript"
+l.Parent = i
+table.insert(
+    g,
+    a(
+        l,
+        function()
+            wait()
+            tool = script.Parent
+            lineconnect = tool.LineConnect
+            object = nil
+            mousedown = false
+            found = false
+            BP = Instance.new("BodyPosition")
+            BP.maxForce = Vector3.new(math.huge * math.huge, math.huge * math.huge, math.huge * math.huge)
+            BP.P = BP.P * 1.1
+            dist = nil
+            point = Instance.new("Part")
+            point.Locked = true
+            point.Anchored = true
+            point.formFactor = 0
+            point.Shape = 0
+            point.BrickColor = BrickColor.Black()
+            point.Size = Vector3.new(1, 1, 1)
+            point.CanCollide = false
+            local s = Instance.new("SpecialMesh")
+            s.MeshType = "Sphere"
+            s.Scale = Vector3.new(.7, .7, .7)
+            s.Parent = point
+            handle = tool.Handle
+            front = tool.Handle
+            color = tool.Handle
+            objval = nil
+            local u = false
+            local v = BP:clone()
+            v.maxForce = Vector3.new(30000, 30000, 30000)
+            function LineConnect(o, p, q)
+                local w = Instance.new("ObjectValue")
+                w.Value = o
+                w.Name = "Part1"
+                local x = Instance.new("ObjectValue")
+                x.Value = p
+                x.Name = "Part2"
+                local y = Instance.new("ObjectValue")
+                y.Value = q
+                y.Name = "Par"
+                local z = Instance.new("ObjectValue")
+                z.Value = color
+                z.Name = "Color"
+                local A = lineconnect:clone()
+                A.Disabled = false
+                w.Parent = A
+                x.Parent = A
+                y.Parent = A
+                z.Parent = A
+                A.Parent = workspace
+                if p == object then
+                    objval = x
+                end
+            end
+            function onButton1Down(B)
+                if mousedown == true then
+                    return
+                end
+                mousedown = true
+                coroutine.resume(
+                    coroutine.create(
+                        function()
+                            local C = point:clone()
+                            C.Parent = tool
+                            LineConnect(front, C, workspace)
+                            while mousedown == true do
+                                C.Parent = tool
+                                if object == nil then
+                                    if B.Target == nil then
+                                        local t = CFrame.new(front.Position, B.Hit.p)
+                                        C.CFrame = CFrame.new(front.Position + t.lookVector * 1000)
+                                    else
+                                        C.CFrame = CFrame.new(B.Hit.p)
+                                    end
+                                else
+                                    LineConnect(front, object, workspace)
+                                    break
+                                end
+                                wait()
+                            end
+                            C:remove()
+                        end
+                    )
+                )
+                while mousedown == true do
+                    if B.Target ~= nil then
+                        local D = B.Target
+                        if D.Anchored == false then
+                            object = D
+                            dist = (object.Position - front.Position).magnitude
+                            break
+                        end
+                    end
+                    wait()
+                end
+                while mousedown == true do
+                    if object.Parent == nil then
+                        break
+                    end
+                    local t = CFrame.new(front.Position, B.Hit.p)
+                    BP.Parent = object
+                    BP.position = front.Position + t.lookVector * dist
+                    wait()
+                end
+                BP:remove()
+                object = nil
+                objval.Value = nil
+            end
+            function onKeyDown(E, B)
+                local E = E:lower()
+                local F = false
+                if E == "q" then
+                    if dist >= 5 then
+                        dist = dist - 10
+                    end
+                end
+                if E == "r" then
+                    if object == nil then
+                        return
+                    end
+                    for G, H in pairs(object:children()) do
+                        if H.className == "BodyGyro" then
+                            return nil
+                        end
+                    end
+                    BG = Instance.new("BodyGyro")
+                    BG.maxTorque = Vector3.new(math.huge, math.huge, math.huge)
+                    BG.cframe = CFrame.new(object.CFrame.p)
+                    BG.Parent = object
+                    repeat
+                        wait()
+                    until object.CFrame == CFrame.new(object.CFrame.p)
+                    BG.Parent = nil
+                    if object == nil then
+                        return
+                    end
+                    for G, H in pairs(object:children()) do
+                        if H.className == "BodyGyro" then
+                            H.Parent = nil
+                        end
+                    end
+                    object.Velocity = Vector3.new(0, 0, 0)
+                    object.RotVelocity = Vector3.new(0, 0, 0)
+                    object.Orientation = Vector3.new(0, 0, 0)
+                end
+                if E == "e" then
+                    dist = dist + 10
+                end
+                if E == "t" then
+                    if dist ~= 10 then
+                        dist = 10
+                    end
+                end
+                if E == "y" then
+                    if dist ~= 200 then
+                        dist = 200
+                    end
+                end
+                if E == "=" then
+                    BP.P = BP.P * 1.5
+                end
+                if E == "-" then
+                    BP.P = BP.P * 0.5
+                end
+            end
+            function onEquipped(B)
+                keymouse = B
+                local I = tool.Parent
+                human = I.Humanoid
+                human.Changed:connect(
+                    function()
+                        if human.Health == 0 then
+                            mousedown = false
+                            BP:remove()
+                            point:remove()
+                            tool:remove()
+                        end
+                    end
+                )
+                B.Button1Down:connect(
+                    function()
+                        onButton1Down(B)
+                    end
+                )
+                B.Button1Up:connect(
+                    function()
+                        mousedown = false
+                    end
+                )
+                B.KeyDown:connect(
+                    function(E)
+                        onKeyDown(E, B)
+                    end
+                )
+                B.Icon = "rbxasset://textures\\GunCursor.png"
+            end
+            tool.Equipped:connect(onEquipped)
+        end
+    )
+)
+for J, H in pairs(h:GetChildren()) do
+    H.Parent = game:GetService("Players").LocalPlayer.Backpack
+    pcall(
+        function()
+            H:MakeJoints()
+        end
+    )
+end
+h:Destroy()
+for J, H in pairs(g) do
+    spawn(
+        function()
+            pcall(H)
+        end
+    )
+end
+end)
+
+
+
+Section:NewButton("Goal To Green team","lol", function()
+local ball = game.Workspace.Ball
+ball.CFrame = CFrame.new(-22.124696731567383, -58.0251350402832, 281.6734619140625)
+end)
+
+Section:NewButton("Goal To Blue Team", "ButtonInfo", function()
+    local ball = game.Workspace.Ball
+ball.CFrame = CFrame.new(18.597450256347656, -58.03794860839844, -335.779541015625)
+end)
+
+Section:NewButton("Ragequit(Fling ball)", "ButtonInfo", function()
+    local ball = game.Workspace.Ball
+ball.CFrame = CFrame.new(-10000,0-100)
+end)
+
+Section:NewButton("Teleport Ball", "ButtonInfo", function()
+    local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local ball = game.Workspace.Ball
+
+if ball then
+    local ballOffset = Vector3.new(-2, -character.Humanoid.HipHeight, 0) -- смещение мяча влево от персонажа
+    
+    ball.CFrame = character.HumanoidRootPart.CFrame + ballOffset
+end
+
+end)
+
+Section:NewButton("Auto setpiece", "ButtonInfo", function()
+    while true do
+    local ohString1 = "Setpiece"
+    game:GetService("ReplicatedStorage").Takesetpiece:FireServer(ohString1)
+    wait(0,1) -- ожидание 1 секунды, прежде чем повторить цикл
+end
+
+end)
+
+Section:NewButton("Bypass Zone ", "ButtonInfo", function()
+    local objectNames = {"BlueGK", "Kickoff", "GreenGK", "FreeKick"}
+
+local function destroyObjects()
+    for _, objectName in pairs(objectNames) do
+        local object = game.Workspace:FindFirstChild(objectName)
+        while object do
+            object:Destroy()
+            object = game.Workspace:FindFirstChild(objectName)
+        end
+    end
+end
+
+while wait(0.01) do
+    destroyObjects()
+end
+end)
+
+local Tab2 = Window:NewTab("Player")
+local Section2 = Tab2:NewSection("Functions")
+
+Section2:NewSlider("FOV", "Adjust the field of view", 1000, 50, function(s)
+game.Workspace.CurrentCamera.FieldOfView = s
+end)
+
+Section2:NewButton("Anti Ragdoll", "Turn off ragdoll", function()
+local player = game.Players.LocalPlayer
+local character = player.Character
+local humanoid = character:FindFirstChildOfClass("Humanoid")
+if humanoid then
+humanoid.Ragdoll = false
+end
+end)
+
+Section2:NewSlider("Speed Slider", "Change the speed", 100, 0, function(s)
+   local walkSpeed = s
+
+local gmt = getrawmetatable(game)
+
+setreadonly(gmt, false)
+
+local oldindex = gmt.__index
+
+gmt.__index = newcclosure(function(self,b)
+
+if b == "WalkSpeed" then
+
+return 16
+
+end
+
+return oldindex(self,b)
+
+end)
+
+game:GetService("Players").LocalPlayer.Character.Humanoid.WalkSpeed = walkSpeed
+end)
+
+local Tab3 = Window:NewTab("Keybind Ui")
+local Section3 = Tab3:NewSection("Functions")
+
+Section3:NewKeybind("UI BIND", "M", Enum.KeyCode.M, function()
+	Library:ToggleUI()
+end)
+end)
+
+Section:NewButton("ECA Super Troll", "ButtonInfo", function()
+    local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua", true))()
+
+game:GetService("StarterGui"):SetCore("SendNotification",{
+    Title = "Executed!",
+    Text = "Welcome to Dr.Rox Hub! Credit to Dr.Rox#7485 And MonoDev#1516!"
+})
+
+local Window = Library.CreateLib("ECA Game TROLL Made By Dr.Rox#7485", "Ocean")
+
+-- TROLLING LOLOLO
+local Tab1 = Window:NewTab("Troll")
+local Section1 = Tab1:NewSection("Troll")
+
+Section1:NewButton("Whistle game(FUNNY)", "ButtonInfo", function()
+    game:GetService("ReplicatedStorage").Whistle:FireServer()
+end)
+
+
+local Tab2 = Window:NewTab("Referee team")
+local Section2 = Tab2:NewSection("Troll")
+
+Section2:NewButton("Clear others BALL LOL", "ButtonInfo", function()
+    -- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+
+local ohString1 = "Clear"
+
+game:GetService("ReplicatedStorage").RefereeEvent:FireServer(ohString1)
+end)
+
+Section2:NewButton("Spawn balls LOL", "ButtonInfo", function()
+    
+local ohString1 = "Spawn"
+
+game:GetService("ReplicatedStorage").RefereeEvent:FireServer(ohString1)
+end)
+end)
+
+Section:NewButton("Pop it trade", "ButtonInfo", function()
+    local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua", true))()
+
+game:GetService("StarterGui"):SetCore("SendNotification",{
+    Title = "Executed!",
+    Text = "Welcome to Dr.Rox Hub! Credit to Dr.Rox#7485 And MonoDev#1516!"
+})
+
+local Window = Library.CreateLib("Pop It Trade Made By Dr.Rox#7485 MonoDev#1516", "Ocean")
+
+-- Trade Scam tab
+local Tab1 = Window:NewTab("Trade Scam")
+local Section1 = Tab1:NewSection("Trade Scam")
+
+Section1:NewButton("Fake Drop", "ButtonInfo", function()
+    local target = game.Players.LocalPlayer.Character.RightHand
+    target:Destroy()
+end)
+
+Section1:NewButton("Re(After Fake drop)", "ButtonInfo", function()
+    game.Players.LocalPlayer.Character.Humanoid.Name = 1
+    local l = game.Players.LocalPlayer.Character["1"]:Clone()
+    l.Parent = game.Players.LocalPlayer.Character
+    l.Name = "Humanoid"
+    wait()
+    game.Players.LocalPlayer.Character["1"]:Destroy()
+    game.Workspace.CurrentCamera.CameraSubject = game.Players.LocalPlayer.Character
+    game.Players.LocalPlayer.Character.Animate.Disabled = true
+    wait()
+    game.Players.LocalPlayer.Character.Animate.Disabled = false
+    game.Players.LocalPlayer.Character.Humanoid.DisplayDistanceType = "None"
+    wait()
+    Location = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+    wait()
+    local prt = Instance.new("Model", workspace);
+    Instance.new("Part", prt).Name="Torso";
+    Instance.new("Part", prt).Name="Head";
+    Instance.new("Humanoid", prt).Name="Humanoid";
+    game.Players.LocalPlayer.Character=prt
+    wait(6)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = Location
+end)
+
+Section1:NewButton("Fake Admin Item", "ButtonInfo", function()
+    -- Equip the tool
+local ohString1 = "Bingus"
+game:GetService("ReplicatedStorage").RemoteEvents.Equip:FireServer(ohString1)
+
+-- Wait for 3 seconds
+wait(0.5)
+
+-- Remove decal
+local handle = game:GetService("Workspace").MeGoatRonST.Bingus.Handle
+for _, decal in pairs(handle:GetDescendants()) do
+  if decal:IsA("Decal") then
+    decal:Destroy()
+  end
+end
+
+end)
+
+Section1:NewButton("Fake Nothing(U need buy Baby Gato)", "Scam", function()
+    game:GetService("ReplicatedStorage").RemoteEvents.Equip:FireServer( "Baby Gato"); wait(0.5); local item = game:GetService("Workspace")[game.Players.LocalPlayer.Name]["Baby Gato"]:FindFirstChild("Baby Gato"); item:Destroy()
+end)
+
+Section1:NewButton("Fake Admin v2(U need buy Elon Spider)", "Scam", function()
+    game:GetService("ReplicatedStorage").RemoteEvents.Equip:FireServer( "Elon Spider")
+wait(0.5)
+local item = game:GetService("Workspace")[game.Players.LocalPlayer.Name]["Elon Spider"]
+ while true do
+   local found = false
+   for _, child in pairs(item.despacito:GetChildren()) do
+      if child.Name == "MeshPart" then
+         found = true
+         child:Destroy()
+         break
+      end
+   end
+   if not found then
+      break
+   end
+end
+item.Handle:ClearAllChildren()
+end)
+
+Section1:NewButton("Ghost Cam", "Scam", function()
+    local name = game.Players.LocalPlayer.Name
+local trash = {
+    game:GetService("Workspace")[name].LeftUpperLeg,
+    game:GetService("Workspace")[name].RightFoot,
+    game:GetService("Workspace")[name].RightLowerLeg,
+    game:GetService("Workspace")[name].LowerTorso,
+    game:GetService("Workspace")[name].RightUpperLeg
+}
+
+for _, object in pairs(trash) do
+    object:Destroy()
+end
+ 
+end)
+
+
+-- Dupe tab
+local Tab2 = Window:NewTab("Dupe")
+local Section2 = Tab2:NewSection("Piano Crash.")
+
+Section2:NewButton("Dupe(Need Piano)", "ButtonInfo", function()
+    repeat
+        wait()
+    until game.Players.LocalPlayer
+    
+    while true do
+        game:GetService("ReplicatedStorage").RemoteEvents.Equip:FireServer("Piano")
+        wait()
+    end
+end)
+
+Section2:NewButton("Safe Position", "ButtonInfo", function()
+  -- Define the size and position of the part
+local partSize = Vector3.new(100, 1, 100)
+local partPosition = Vector3.new(0, 1000000, 0)
+
+-- Check if a part already exists at the given position
+local safe  = workspace:FindFirstChild("Safe")
+if safe then
+    -- If a part exists, teleport the player to it
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(safe.Position) + Vector3.new(0, safe.Size.Y/2 + 5, 0)
+else
+    -- If no part exists, create a new one
+-- Create the part
+local part = Instance.new("Part")
+part.Size = partSize
+part.Name = "Safe"
+part.Color = Color3.new(0, 0, 1)
+part.Position = partPosition
+part.Anchored = true
+part.CanCollide = true
+part.Parent = game.Workspace
+
+-- Teleport the player to the new location
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(part.Position) + Vector3.new(0, part.Size.Y/2 + 5, 0)
+end
+end)
+
+
+Section2:NewButton("Lag Server(Rejoin if u want stop)", "ButtonInfo", function()
+    repeat
+        wait()
+    until game.Players.LocalPlayer
+    
+    while true do
+        game:GetService("ReplicatedStorage").RemoteEvents.Equip:FireServer("Jet")
+        wait()
+    end
+end)
+
+-- Auto Buy tab
+local Tab3 = Window:NewTab("Buy Limit Item")
+local Section3 = Tab3:NewSection("Limit items")
+
+Section3:NewTextBox("Item Name", "TextboxInfo", function(txt)
+print(txt)
+local ohString1 = txt
+game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(ohString1)
+end)
+ 
+
+local Tab2 = Window:NewTab("XRay")
+local Section2 = Tab2:NewSection("Check values in trade")
+
+Section2:NewButton("XRay Can see Values", "Exclusive", function()
+    game.Players.localPlayer.XRay.Value = true
+end)
+
+local Tab3 = Window:NewTab("Troll")
+local Section3 = Tab3:NewSection("Funny Functions.")
+
+
+Section3:NewTextBox("Anchor player", "TextboxInfo", function(txt)
+    
+        local p1 = game.Players.LocalPlayer.Character.HumanoidRootPart
+        local p2 = txt
+        local pos = p1.CFrame
+
+        local targetPlayer = game.Players:FindFirstChild(p2)
+        if targetPlayer then
+            p1.CFrame = targetPlayer.Character.HumanoidRootPart.CFrame
+            wait(0.1)
+
+            local args = {
+                [1] = "Anchor"
+            }
+
+            game:GetService("ReplicatedStorage").RemoteEvents.Equip:FireServer(unpack(args))
+            wait(0.1)
+            game.Players.LocalPlayer.Character.Humanoid:Destroy()
+
+        else
+            warn("Player with username '" .. p2 .. "' not found!")
+        end
+end)
+
+
+Section3:NewTextBox("Kick Player", "TextboxInfo", function(txt)
+    
+        local p1 = game.Players.LocalPlayer.Character.HumanoidRootPart
+        local p2 = txt
+        local pos = p1.CFrame
+
+        local targetPlayer = game.Players:FindFirstChild(p2)
+        if targetPlayer then
+            p1.CFrame = targetPlayer.Character.HumanoidRootPart.CFrame
+            wait(0.1)
+
+            local args = {
+                [1] = "Backrooms"
+            }
+
+            game:GetService("ReplicatedStorage").RemoteEvents.Equip:FireServer(unpack(args))
+            wait(0.1)
+            game.Players.LocalPlayer.Character.Humanoid:Destroy()
+
+        else
+            warn("Player with username '" .. p2 .. "' not found!")
+        end
+end)
+
+Section3:NewTextBox("Heart troll", "TextboxInfo", function(txt)
+    
+        local p1 = game.Players.LocalPlayer.Character.HumanoidRootPart
+        local p2 = txt
+        local pos = p1.CFrame
+
+        local targetPlayer = game.Players:FindFirstChild(p2)
+        if targetPlayer then
+            p1.CFrame = targetPlayer.Character.HumanoidRootPart.CFrame
+            wait(0.1)
+            game.Players.LocalPlayer.Character.Humanoid:Destroy()
+        else
+            warn("Player with username '" .. p2 .. "' not found!")
+        end
+end)
+
+
+
+local Tab4 = Window:NewTab("Delete")
+local Section4 = Tab4:NewSection("Map.")
+
+
+Section4:NewButton("Delete HitDetect" , "ButtonInfo", function()
+    game:GetService("Workspace").GoldenToilet.HitDetect:Destroy()
+end)
+
+Section4:NewButton("Delete Group Wall" , "ButtonInfo", function()
+    game:GetService("Workspace").Map.GroupReward.Field:Destroy()
+end)
+
+local Tab5 = Window:NewTab("Teleport")
+local Section5 = Tab5:NewSection("Places.")
+
+Section5:NewButton("Teleport To Golden Place" , "ButtonInfo", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").GoldenToilet.Base.CFrame + Vector3.new(0, 3, 0)
+end)
+
+local Tab6 = Window:NewTab("Credits")
+local Section6 = Tab6:NewSection("Dr.Rox Made it.")
+
+Section6:NewButton("Credit Dr.Rox#7485", "ButtonInfo", function()
+    setclipboard("Dr.Rox#7485")
+end)
+
+Section6:NewButton("Credit MonoDev#1516", "ButtonInfo", function()
+    setclipboard("MonoDev#1516")
+end)
+
+Section6:NewButton("Credit My server https://discord.gg/R8VGhhH2", "ButtonInfo", function()
+    setclipboard("https://discord.gg/R8VGhhH2")
+end)
+end)
+
+Section:NewButton("Squid Game", "ButtonInfo", function()
+    local Library = loadstring(game:HttpGet('https://raw.githubusercontent.com/Rain-Design/Unnamed/main/Library.lua'))()
+Library.Theme = "Tokyo Night"
+local Flags = Library.Flags
+
+local Window = Library:Window({
+   Text = "Dr.Rox Hub - Squid Game Infinity RP"
+})
+
+local Tab = Window:Tab({
+   Text = "Introduction"
+})
+
+
+local Tab2 = Window:Tab({
+   Text = "Tools"
+})
+
+local Tab3 = Window:Tab({
+   Text = "Troll"
+})
+
+
+local Tab4 = Window:Tab({
+   Text = "Player"
+})
+
+local Tab5 = Window:Tab({
+   Text = "Teleport"
+})
+
+local Tab6 = Window:Tab({
+   Text = "Visual"
+})
+
+local Tab7 = Window:Tab({
+   Text = "Credits"
+})
+
+
+
+local Section = Tab:Section({
+   Text = "This is Dr.Rox Hub. Enjoy!"
+})
+
+local Section2 = Tab2:Section({
+   Text = "Get Items"
+})
+
+local Section3 = Tab3:Section({
+   Text = "Funny"
+})
+local Section4 = Tab4:Section({
+   Text = "Localplayer"
+})
+
+local Section5 = Tab5:Section({
+   Text = "Locations"
+})
+
+local Section6 = Tab6:Section({
+   Text = "Esp and etc"
+})
+
+local Section7 = Tab7:Section({
+   Text = "Copy informations"
+})
+
+
+
+
+Section2:Button({
+   Text = "Get all people items",
+   Callback = function()
+       for i,v in pairs (game.Players:GetChildren()) do
+wait()
+for i,b in pairs (v.Backpack:GetChildren()) do
+b.Parent = game.Players.LocalPlayer.Backpack
+end
+end
+   end
+})
+
+Section4:Slider({
+   Text = "Speed",
+   Default = 25,
+   Minimum = 0,
+   Maximum = 200,
+   Callback = function(s) game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s end
+})
+
+Section2:Button({
+   Text = "Get Officer Tools(Use for Kill)",
+   Callback = function()
+       local Players = game:GetService("Players")
+local OfficerTeam = game:GetService("Teams"):FindFirstChild("Officer")
+
+if OfficerTeam then
+    for _, player in ipairs(OfficerTeam:GetPlayers()) do
+        for _, item in ipairs(player.Backpack:GetChildren()) do
+            item.Parent = Players.LocalPlayer.Backpack
+        end
+    end
+end
+
+   end
+})
+
+Section2:Button({
+   Text = "Get Mastermind Tools",
+   Callback = function()
+       local Players = game:GetService("Players")
+local MastermindTeam = game:GetService("Teams"):FindFirstChild("Mastermind")
+
+if MastermindTeam then
+    for _, player in ipairs(MastermindTeam:GetPlayers()) do
+        for _, item in ipairs(player.Backpack:GetChildren()) do
+            item.Parent = Players.LocalPlayer.Backpack
+        end
+    end
+end
+
+   end
+})
+
+Section2:Button({
+   Text = "Get Detective Tools",
+   Callback = function()
+       local Players = game:GetService("Players")
+local DetectiveTeam = game:GetService("Teams"):FindFirstChild("Detective")
+
+if DetectiveTeam then
+    for _, player in ipairs(DetectiveTeam:GetPlayers()) do
+        for _, item in ipairs(player.Backpack:GetChildren()) do
+            item.Parent = Players.LocalPlayer.Backpack
+        end
+    end
+end
+
+   end
+})
+
+
+
+
+
+Section3:Input({
+   Text = "Change ur number above head",
+   Callback = function(txt)
+      local ohNumber1 = tonumber(txt)
+      if ohNumber1 ~= nil then
+          game:GetService("ReplicatedStorage").Events.ChangeNumber:FireServer(ohNumber1)
+      else
+          print("Invalid input. Please enter a number.")
+      end
+   end
+})
+
+Section3:Button({
+   Text = "Kill all",
+   Callback = function()
+       warn("Teleported")
+   end
+})
+
+Section:Button({
+   Text = "Load script for RST Game",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/BrySadW/CoolNew/main/Primary"))()
+   end
+})
+
+
+
+
+
+
+
+
+
+Tab:Select()
+end)
+
+Section:NewButton("Ragdoll System Test", "ButtonInfo", function()
+   repeat task.wait() until game.Players.LocalPlayer
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua", true))()
+
+game:GetService("StarterGui"):SetCore("SendNotification",{
+Title = "Executed!",
+Text = "Welcome to Dr.Rox Hub! Credit to Dr.Rox#7485!"
+})
+
+local Window = Library.CreateLib("Ragdoll System Test CREDIT TO Dr.Rox#7485", "Ocean")
+local Tab = Window:NewTab("Script")
+local Section = Tab:NewSection("Main")
+local Tab = Window:NewTab("Credit")
+
+
+Section:NewButton("Hitbox Expander(Press V)", "ButtonInfo", function()
+   -- Variables
+local player = game.Players.LocalPlayer
+local mouse = player:GetMouse()
+
+-- Settings
+
+bind = "" 
+bind2 = "V"
+
+-- Script
+
+mouse.KeyDown:connect(function(key)
+if key == bind then
+player.Character.HumanoidRootPart.CFrame = CFrame.new(1254.09656, 137.906067, -172.128204)
+end
+end)
+
+mouse.KeyDown:connect(function(key2)
+if key2 == bind2 then
+_G.HeadSize = 20
+_G.Disabled = true
+
+
+if _G.Disabled then
+for i,v in next, game:GetService('Players'):GetPlayers() do
+if v.Name ~= game:GetService('Players').LocalPlayer.Name then
+pcall(function()
+v.Character.HumanoidRootPart.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize)
+v.Character.HumanoidRootPart.Transparency = 0.7
+v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Really blue")
+v.Character.HumanoidRootPart.Material = "Neon"
+v.Character.HumanoidRootPart.CanCollide = false
+end)
+end
+end
+end
+end
+end)
+end)
+
+Section:NewButton("Anti Knock Back", "ButtonInfo", function()
+    local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoid = character:WaitForChild("Humanoid")
+
+local function onTakingDamage(hit, damage)
+    if hit:IsDescendantOf(player.Character) then
+        local knockback = hit.AssemblyLinearVelocity.magnitude
+        hit.AssemblyLinearVelocity = Vector3.new(0,0,0)
+        humanoid:ChangeState(Enum.HumanoidStateType.GettingUp)
+        humanoid:TakeDamage(damage)
+        hit.AssemblyLinearVelocity = Vector3.new(0,knockback/2,0)
+    end
+end
+
+local function onChildAdded(child)
+    if child:IsA("BasePart") then
+        child.Touched:Connect(function(part)
+            onTakingDamage(part, 0)
+        end)
+    end
+end
+
+for _, child in ipairs(character:GetChildren()) do
+    onChildAdded(child)
+end
+
+character.ChildAdded:Connect(onChildAdded)
+
+end)
+
+Section:NewButton("Instant Regen", "ButtonInfo", function()
+    local playerName = game:GetService("Players").LocalPlayer.Name
+local playerHealth = game:GetService("Workspace"):FindFirstChild(playerName) and game:GetService("Workspace")[playerName]:FindFirstChild("Health")
+
+if playerHealth then
+    playerHealth:Destroy()
+end
+
+local Character = game:GetService("Players").LocalPlayer.Character or game:GetService("Players").LocalPlayer.CharacterAdded:Wait()
+local Humanoid = Character:WaitForChild("Humanoid")
+Humanoid.Health = Humanoid.MaxHealth
+
+end)
+
+Section:NewButton("Auto Regen", "ButtonInfo", function()
+    local playerName = game:GetService("Players").LocalPlayer.Name
+local playerHealth = game:GetService("Workspace"):FindFirstChild(playerName) and game:GetService("Workspace")[playerName]:FindFirstChild("Health")
+
+if playerHealth then
+    playerHealth:Destroy()
+end
+
+local Character = game:GetService("Players").LocalPlayer.Character or game:GetService("Players").LocalPlayer.CharacterAdded:Wait()
+local Humanoid = Character:WaitForChild("Humanoid")
+Humanoid.Health = Humanoid.MaxHealth
+
+local REGEN_AMOUNT = 50 -- adjust the amount to your liking
+local REGEN_DELAY = 1 -- adjust the delay to your liking
+
+local function Regenerate()
+    if Humanoid.Health < Humanoid.MaxHealth then
+        Humanoid.Health = math.min(Humanoid.MaxHealth, Humanoid.Health + REGEN_AMOUNT)
+    end
+end
+
+Humanoid:GetPropertyChangedSignal("Health"):Connect(function()
+    if Humanoid.Health < Humanoid.MaxHealth then
+        wait(REGEN_DELAY)
+        Regenerate()
+    end
+end)
+
+end)
+
+Section:NewSlider("Speed hack", "SliderInfo", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+
+Section:NewButton("Doge Gui", "ButtonInfo", function()
+    loadstring(game:GetObjects('rbxassetid://2776192633')[1].Source)()
+end)
+
+local Section = Tab:NewSection("Credits")
+
+
+Section:NewButton("Credit to Dr.Rox#7485", "ButtonInfo", function()
+    local clipboard = game:GetService("ServerScriptService"):FindFirstChild("clipboard")
+if clipboard == nil then
+    clipboard = game:GetService("ServerScriptService"):WaitForChild("clipboard")
+end
+
+-- Change the text in between the quotation marks to whatever you want to copy to the clipboard
+local textToCopy = "Credit to Dr.Rox#7485"
+
+-- Copies the text to the clipboard
+clipboard.set(textToCopy)
+
+-- Prints a message to the output console to confirm that the text has been copied
+print("Copied text to clipboard: " .. textToCopy)
+
+end)
+
+Section:NewButton("https://discord.gg/Gppy9Drqbv", "ButtonInfo", function()
+    local clipboard = game:GetService("ServerScriptService"):FindFirstChild("clipboard")
+if clipboard == nil then
+    clipboard = game:GetService("ServerScriptService"):WaitForChild("clipboard")
+end
+
+-- Change the text in between the quotation marks to whatever you want to copy to the clipboard
+local textToCopy = "https://discord.gg/Gppy9Drqbv"
+
+-- Copies the text to the clipboard
+clipboard.set(textToCopy)
+
+-- Prints a message to the output console to confirm that the text has been copied
+print("Copied text to clipboard: " .. textToCopy)
+
+
+end)
+end)
+end)
